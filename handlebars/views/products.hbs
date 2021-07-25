@@ -1,0 +1,24 @@
+<div class="jumbotron" style="min-height: 100vh; display: flex; flex-direction: column">
+  <h2 class="mb-4 mt-4">Products</h2>
+
+  {{#if productsExists}}
+    <div class="bg-dark text-light">
+      <div class="row border-bottom">
+        <div class="col-4 p-4 fw-bold">Nombre</div>
+        <div class="col-4 p-4 fw-bold">Precio</div>
+        <div class="col-4 p-4 fw-bold">Foto</div>
+      </div>
+      {{#each products}}
+        <div class="row border-bottom">
+          <div class="col-4 p-4">{{this.title}}</div>
+          <div class="col-4 p-4">{{this.price}}</div>
+          <div class="col-4 p-4"><img width="50" src={{this.thumbnail}} alt="not found"></div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="alert alert-warning fw-bold" role="alert">
+      No se encontraron productos
+    </div>
+  {{/if}}
+</div>

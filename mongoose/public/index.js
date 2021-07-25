@@ -1,0 +1,143 @@
+const socket                = io();
+
+const productForm           = document.querySelector('.product-form');
+const productTitleInput     = productForm.querySelector('[name="title"]');
+const productPriceInput     = productForm.querySelector('[name="price"]');
+const productThumbnailInput = productForm.querySelector('[name="thumbnail"]');
+const productsTable         = document.querySelector('.productsCtn');
+
+const chatForm              = document.querySelector('.chat-form');
+const chatMessageInput      = chatForm.querySelector('[name="message"]');
+const chatEmailInput        = chatForm.querySelector('[name="email"]');
+const messagesCtn           = document.querySelector('.chat-messages');
+
+let productsExists = false;
+
+
+const productsTemplate = Handlebars.compile(`
+  {{#if productsExists}}
+    <div class="bg-dark grid">
+      <div class="row border-bottom">
+        <div class="col-4 p-4 fw-bold">Nombre</div>
+        <div class="col-4 p-4 fw-bold">Precio</div>
+        <div class="col-4 p-4 fw-bold">Foto</div>
+      </div>
+      {{#each products}}
+      <div class="row border-bottom">
+        <div class="col-4 p-4">{{this.title}}</div>
+        <div class="col-4 p-4">{{this.price}}</div>
+        <div class="col-4 p-4">
+          <img width="50" src="{{this.thumbnail}}" />
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="alert alert-warning fw-bold" role="alert"> No se encontraron productos</div>
+  {{/if}}
+`);
+
+const firstProductTemplate = Handlebars.compile(`
+  <div class="bg-dark grid">
+    <div class="row border-bottom">
+      <div class="col-4 p-4 fw-bold">Nombre</div>
+      <div class="col-4 p-4 fw-bold">Precio</div>
+      <div class="col-4 p-4 fw-bold">Foto</div>
+    </div>
+    <div class="row border-bottom">
+      <div class="col-4 p-4">{{title}}</div>
+      <div class="col-4 p-4">{{price}}</div>
+      <div class="col-4 p-4">
+        <img width="50" src="{{thumbnail}}" />
+      </div>
+    </div>
+  </div>
+`);
+
+const productTemplate = Handlebars.compile(`
+  <div class="row border-bottom">
+    <div class="col-4 p-4">{{title}}</div>
+    <div class="col-4 p-4">{{price}}</div>
+    <div class="col-4 p-4">
+      <img width="50" src="{{thumbnail}}" />
+    </div>
+  </div>
+`);
+
+const messagesTemplate = Handlebars.compile(`
+  {{#if messagesExists}}
+    {{#each messages}}
+      <div class="message-item">
+        <span class="author">{{this.author}}</span>
+        <span>
+          [<span class="date">{{this.date}}</span>]:
+        </span>
+        <span class="message">{{this.message}}</span>
+      </div>
+    {{/each}}
+  {{/if}}
+`);
+
+const messageTemplate = Handlebars.compile(`
+  <div class="message-item">
+    <span class="author">{{author}}</span>
+    <span>
+      [<span class="date">{{date}}</span>]:
+    </span>
+    <span class="message">{{message}}</span>
+  </div>
+`);
+
+function renderProducts(products = []) {
+  productsExists = !!products.length;
+  const html = productsTemplate({products, productsExists: !!products.length});
+  productsTable.innerHTML = html;
+}
+
+function renderProduct(product) {
+  if (productsExists) {
+    const html = productTemplate({...product});
+    productsTable.querySelector('.grid').insertAdjacentHTML('beforeend', html);
+  } else {
+    const html = firstProductTemplate({...product});
+    productsTable.innerHTML = html;
+    productsExists = true;
+  }
+}
+
+function renderMessages(messages = []) {
+  const html = messagesTemplate({messages, messagesExists: !!messages.length});
+  messagesCtn.innerHTML = html;
+  messagesCtn.scrollTop = messagesCtn.scrollHeight;
+}
+
+function renderMessage(message) {
+  const html = messageTemplate({...message});
+  messagesCtn.insertAdjacentHTML('beforeend', html);
+  messagesCtn.scrollTop = messagesCtn.scrollHeight;
+}
+
+socket.on('products', renderProducts);
+
+socket.on('product', renderProduct);
+
+socket.on('messages', renderMessages);
+
+socket.on('message', renderMessage);
+
+productForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const title = productTitleInput.value;
+  const price = productPriceInput.value;
+  const thumbnail = productThumbnailInput.value;
+  socket.emit('productAdd', {title, price, thumbnail});
+  productForm.reset();
+});
+
+chatForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const email   = chatEmailInput.value;
+  const message = chatMessageInput.value;
+  socket.emit('message', {author: email, message});
+  chatMessageInput.value = '';
+});

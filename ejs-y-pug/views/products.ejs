@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <title>Productos</title>
+  </head>
+  <body>
+    <div
+      class="jumbotron"
+      style="min-height: 100vh; display: flex; flex-direction: column"
+    >
+      <h2 class="mb-4 mt-4">Productos</h2>
+
+      <% if (productsExists) { %>
+      <div class="bg-dark text-light">
+        <div class="row border-bottom">
+          <div class="col-4 p-4 fw-bold">Nombre</div>
+          <div class="col-4 p-4 fw-bold">Precio</div>
+          <div class="col-4 p-4 fw-bold">Foto</div>
+        </div>
+        <% products.forEach(function(product) { %>
+        <div class="row border-bottom">
+          <div class="col-4 p-4"><%= product.title %></div>
+          <div class="col-4 p-4"><%= product.price %></div>
+          <div class="col-4 p-4">
+            <img width="50" src="<%= product.thumbnail %>" alt="not found" />
+          </div>
+        </div>
+        <% }) %>
+      </div>
+      <% } else { %>
+      <div class="alert alert-warning fw-bold" role="alert">
+        No se encontraron productos
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
