@@ -69,7 +69,16 @@ routerProductsApi.delete('/borrar/:id', async (req, res) => {
 /* VIEWS */
 routerProductsView.get('/vista', isLoggedIn, async (req, res) => {
   const products = await productController.findAll();
-  res.render('products', { products, productsExists: products.length > 0, name: req.user?.username, nameExists: req.user?.username?.length > 0 });
+  res.render(
+    'products', 
+    { 
+      products, 
+      productsExists: products.length > 0,
+      name: req.user?.username,
+      email: req.user?.email,
+      photo: req.user?.photo,
+    }
+  );
 })
 
 routerProductsView.get('/vista-test', async (req, res) => {

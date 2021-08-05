@@ -9,10 +9,11 @@ html
     div(class="jumbotron container-fluid" style="min-height: 100vh; display: flex; flex-direction: column")
 
       block(class="logged-alert d-flex justify-content-between align-items-center alert alert-primary fw-bold mt-4" role="alert")
-        if nameExists
+        block()
           h2(class="fw-bold logged-message") Bienvenido #{name}
-        else
-          h2(class="fw-bold logged-message") Bienvenido
+          h3(class="logged-message") #{email}
+        block()
+          img(src=photo , alt=name)
         a(href="/logout" class="btn btn-warning") Desloguear
 
 
