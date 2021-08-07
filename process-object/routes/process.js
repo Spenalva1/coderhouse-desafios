@@ -21,7 +21,7 @@ routerProcess.get('/info', async (req, res) => {
 });
 
 routerProcess.get('/randoms', (req, res) => {
-  const random = fork('./random.js');
+  const random = fork('./processes/random.js');
   random.on('message', numbers => {
     res.json(numbers);
   })
