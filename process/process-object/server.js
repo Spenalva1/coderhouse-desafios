@@ -150,3 +150,7 @@ const server = http.listen(process.argv[2] || process.env.PORT || 8080, () => {
 server.on('error', () => {
   console.log('Error del servidor.');
 });
+
+process.on('exit', code => {
+  console.log('Exit code -> ', code)
+})
