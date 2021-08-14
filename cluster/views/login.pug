@@ -1,0 +1,43 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous")
+    title Login
+  body
+    div(class="jumbotron container-fluid" style="min-height: 100vh; display: flex; flex-direction: column")
+
+      h2(class="mb-4 mt-4") Login de Usuario
+
+      .row 
+        .col.col-md-4
+          a(href="/auth/facebook" type="submit" class="btn btn-primary mt-4") Login con Facebook
+
+      //- if loginError
+      //-   block(class="alert alert-danger fw-bold" role="alert") #{loginError}
+
+      //- form(action="/login" method="POST")
+      //-   block(class="form-group")
+      //-       label(for="name") Usuario
+      //-       input(type="text" required class="form-control" id="name" name="username" placeholder="Ingrese su nombre")
+      //-   block(class="form-group")
+      //-       label(for="name") Contraseña
+      //-       input(type="password" required class="form-control" id="password" name="password" placeholder="Ingrese su nombre")
+      //-   button(type="submit" class="btn btn-primary mt-4") Login
+
+      //- hr
+
+      //- h2(class="mb-4 mt-4") Crear Usuario
+
+      //- if signupError
+      //-   block(class="alert alert-danger fw-bold" role="alert") #{signupError}
+
+      //- form(action="/signup" method="POST")
+      //-   block(class="form-group")
+      //-       label(for="signup-name") Usuario
+      //-       input(type="text" required class="form-control" id="signup-name" name="username" placeholder="Ingrese su nombre")
+      //-   block(class="form-group")
+      //-       label(for="signup-password") Contraseña
+      //-       input(type="password" required class="form-control" id="signup-password" name="password" placeholder="Ingrese su nombre")
+      //-   button(type="submit" class="btn btn-primary mt-4") Resgistrarme
