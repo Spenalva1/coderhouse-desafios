@@ -1,10 +1,10 @@
-import express from 'express';
-import productController from '../controllers/products.js';
-import productTestController from '../api-test/products.js';
-import isLoggedIn from '../auth/isLoggedIn.js';
+const express = require('express');
+const productController = require('../controllers/products.js');
+const productTestController = require('../api-test/products.js');
+const isLoggedIn = require('../auth/isLoggedIn.js');
 
-export const routerProductsApi = express.Router();
-export const routerProductsView = express.Router();
+const routerProductsApi = express.Router();
+const routerProductsView = express.Router();
 
 /* API */
 routerProductsApi.get('/listar', async (req, res) => {
@@ -70,9 +70,9 @@ routerProductsApi.delete('/borrar/:id', async (req, res) => {
 routerProductsView.get('/vista', isLoggedIn, async (req, res) => {
   const products = await productController.findAll();
   res.render(
-    'products', 
-    { 
-      products, 
+    'products',
+    {
+      products,
       productsExists: products.length > 0,
       name: req.user?.username,
       email: req.user?.email,
@@ -88,3 +88,8 @@ routerProductsView.get('/vista-test', async (req, res) => {
   res.render('products', { products, productsExists: products.length > 0 });
 })
 /* VIEWS */
+
+module.exports = {
+  routerProductsApi,
+  routerProductsView
+}

@@ -1,6 +1,6 @@
-import passport from 'passport';
-import { Strategy as FacebookStrategy } from 'passport-facebook';
-import User from '../models/User.js';
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
+const User = require('../models/User.js');
 
 passport.use(new FacebookStrategy(
   {
@@ -10,13 +10,14 @@ passport.use(new FacebookStrategy(
     profileFields: ['id', 'displayName', 'photos', 'emails'],
   },
   function(accessToken, refreshToken, profile, done) {
+    console.log('he')
     User.findOrCreate(
       {
-        facebookId: profile.id, 
+        facebookId: profile.id,
         username: profile.displayName,
         photo: profile.photos[0].value,
         email: profile.emails[0].value
-      }, 
+      },
       function(err, user, created) {
         if (err) { return done(err) }
         done(null, user);
@@ -33,4 +34,4 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-export default passport;
+module.exports = passport;

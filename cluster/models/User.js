@@ -1,5 +1,5 @@
-import mongoose from '../DB/connection.js';
-import findOrCreate from 'mongoose-findorcreate';
+const mongoose = require('mongoose');
+const findOrCreate = require('mongoose-findorcreate');
 
 const schema = mongoose.Schema({
   username: { type: String, require: true, max: 100 },
@@ -13,6 +13,4 @@ schema.plugin(findOrCreate);
 
 const User = mongoose.model('users', schema);
 
-
-
-export default User;
+module.exports = User;

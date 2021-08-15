@@ -1,4 +1,4 @@
-import Product from "../models/Product.js";
+const Product = require("../models/Product.js");
 
 class ProductController {
 
@@ -27,4 +27,4 @@ class ProductController {
 
 const productController = new ProductController();
 
-export default productController;
+module.exports = productController;

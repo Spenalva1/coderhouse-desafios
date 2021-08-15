@@ -1,4 +1,4 @@
-import mongoose from '../DB/connection.js'
+const  mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
   author: { type: Object, require: true },
@@ -8,4 +8,4 @@ const schema = mongoose.Schema({
 
 const Message = mongoose.model('messages', schema);
 
-export default Message;
+module.exports = Message;

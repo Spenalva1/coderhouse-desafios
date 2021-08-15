@@ -1,4 +1,8 @@
 process.on('message', length => {
+  process.send(getRandomNumbers(length));
+});
+
+function getRandomNumbers(length = 0) {
   const numbers = {};
   let number;
   for (let i = 0; i < length; i++) {
@@ -9,5 +13,9 @@ process.on('message', length => {
       numbers[number] = 1;
     }
   }
-  process.send(numbers);
-});
+  return numbers;
+}
+
+export {
+  getRandomNumbers
+}

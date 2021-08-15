@@ -1,24 +1,22 @@
-import 'dotenv/config';
-import express from 'express';
-import httpModule from 'http';
-import session from 'express-session';
-import moment from 'moment';
-import { Server } from 'socket.io';
-import MongoStore from 'connect-mongo';
-import cluster from 'cluster';
-import os from 'os';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = dirname(fileURLToPath(import.meta.url));
+require('dotenv').config();
+const express = require('express');
+const httpModule = require('http');
+const session = require('express-session');
+const moment = require('moment');
+const { Server } = require('socket.io');
+const MongoStore = require('connect-mongo');
+const cluster = require('cluster');
+const os = require('os');
 
-import normalizeMessages from './normalizr/messages-center.js';
-import passport from './auth/passport_config.js';
+const normalizeMessages = require('./normalizr/messages-center.js');
+const passport = require('./auth/passport_config.js');
 
-import productController from './controllers/products.js';
-import messagesController from './controllers/messages.js';
-import { routerProductsApi, routerProductsView } from './routes/products.js';
-import routerProcess from './routes/process.js';
-import isLoggedIn from './auth/isLoggedIn.js';
+require('./DB/connection.js');
+const productController = require('./controllers/products.js');
+const messagesController = require('./controllers/messages.js');
+const { routerProductsApi, routerProductsView } = require('./routes/products.js');
+const routerProcess = require('./routes/process.js');
+const isLoggedIn = require('./auth/isLoggedIn.js');
 
 
 const app = express();
@@ -120,11 +118,11 @@ if (mode === 'FORK') {
       `Servidor inicializado en el puerto ${server.address().port}.`
     );
   });
-  
+
   server.on('error', () => {
     console.log('Error del servidor.');
   });
-  
+
   process.on('exit', code => {
     console.log('Exit code -> ', code)
   })
@@ -133,7 +131,7 @@ if (mode === 'FORK') {
 if (mode === 'CLUSTER') {
   if (cluster.isMaster) {
     for (let i = 0; i < os.cpus().length; i++) {
-      cluster.fork();      
+      cluster.fork();
     }
 
     cluster.on('exit', (worker, code, signal) => {
@@ -145,11 +143,11 @@ if (mode === 'CLUSTER') {
         `Servidor inicializado en el puerto ${server.address().port}.`
       );
     });
-    
+
     server.on('error', () => {
       console.log('Error del servidor.');
     });
-    
+
     process.on('exit', code => {
       console.log('Exit code -> ', code)
     })

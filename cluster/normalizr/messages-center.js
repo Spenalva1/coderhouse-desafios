@@ -1,6 +1,6 @@
-import util from 'util';
-import { normalize, schema, denormalize } from 'normalizr';
-import mongoose from 'mongoose'
+const util = require('util');
+const { normalize, schema, denormalize } = require('normalizr');
+const mongoose = require('mongoose');
 
 const data = {
     id: 0,
@@ -68,7 +68,7 @@ const messagesCenter = new schema.Entity('messagesCenter', {
     messages: [message]
 });
 
-export default function normalizeMessages(messages) {
+module.exports = function normalizeMessages(messages) {
     const toNormalize = messages.map((message, i) => ({
         author: message.author,
         date: message.date,

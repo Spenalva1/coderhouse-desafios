@@ -1,4 +1,4 @@
-import mongoose from '../DB/connection.js'
+const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
   title: { type: String, require: true, max: 100 },
@@ -8,4 +8,4 @@ const schema = mongoose.Schema({
 
 const Product = mongoose.model('products', schema);
 
-export default Product;
+module.exports = Product;

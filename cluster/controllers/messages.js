@@ -1,4 +1,4 @@
-import Message from '../models/Message.js';
+const Message = require('../models/Message.js');
 
 class MessagesController {
 
@@ -27,4 +27,4 @@ class MessagesController {
 
 const messagesController = new MessagesController();
 
-export default messagesController;
+module.exports = messagesController;

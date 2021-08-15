@@ -1,12 +1,12 @@
-import express from 'express';
-import { fork } from 'child_process';
-import os from 'os';
+const express =  require('express');
+const { fork } =  require('child_process');
+const os =  require('os');
 
 const routerProcess = express.Router();
 
 
 routerProcess.get('/info', async (req, res) => {
-  res.render('info', 
+  res.render('info',
     {
       info: [
         { key: 'Argumentos de entrada', value: process.argv.join() },
@@ -30,4 +30,4 @@ routerProcess.get('/randoms', (req, res) => {
   random.send(req.query.cant || 100000000);
 });
 
-export default routerProcess;
+module.exports = routerProcess;

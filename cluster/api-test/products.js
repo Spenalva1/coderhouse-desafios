@@ -1,4 +1,4 @@
-import faker from 'faker';
+const faker =  require('faker');
 
 faker.locale = 'es';
 
@@ -7,13 +7,13 @@ class ProductTestController {
 
   async findAll(quantity) {
     return new Array(quantity).fill(null).map((e) => ({
-        title: faker.commerce.productName(), 
-        price: faker.commerce.price(), 
-        thumbnail: faker.image.image(), 
+        title: faker.commerce.productName(),
+        price: faker.commerce.price(),
+        thumbnail: faker.image.image(),
     }));
   }
 }
 
 const productTestController = new ProductTestController();
 
-export default productTestController;
+module.exports = productTestController;
