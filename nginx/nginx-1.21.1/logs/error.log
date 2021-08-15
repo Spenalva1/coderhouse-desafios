@@ -1,0 +1,16 @@
+2021/08/15 00:29:08 [notice] 18320#4704: signal process started
+2021/08/15 00:29:33 [notice] 12076#16236: signal process started
+2021/08/15 00:30:00 [notice] 21092#19716: signal process started
+2021/08/15 00:30:09 [notice] 19504#3988: signal process started
+2021/08/15 00:30:12 [error] 18608#1832: *29 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost:3000"
+2021/08/15 00:30:41 [notice] 2444#18708: signal process started
+2021/08/15 00:32:46 [notice] 8592#21040: signal process started
+2021/08/15 00:33:50 [notice] 21180#19084: signal process started
+2021/08/15 00:34:04 [error] 16332#16680: *57 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost"
+2021/08/15 00:34:12 [error] 16332#16680: *57 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost"
+2021/08/15 00:37:02 [error] 16332#16680: *84 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost"
+2021/08/15 00:38:20 [error] 16332#16680: *114 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost"
+2021/08/15 00:39:41 [error] 16332#16680: *114 upstream timed out (10060: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) while reading response header from upstream, client: 127.0.0.1, server: nginx_node, request: "GET /randoms HTTP/1.1", upstream: "http://127.0.0.1:8082/randoms", host: "localhost"
+2021/08/15 00:40:06 [error] 16332#16680: *114 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: nginx_node, request: "GET /randoms HTTP/1.1", upstream: "http://127.0.0.1:8081/randoms", host: "localhost"
+2021/08/15 00:41:00 [error] 16332#16680: *138 directory index of "C:\Users\spenalva\Desktop\my-codes\coderhouse-desafios\nginx\nginx-1.21.1/../node_server/public/" is forbidden, client: 127.0.0.1, server: nginx_node, request: "GET / HTTP/1.1", host: "localhost"
+2021/08/15 00:43:14 [notice] 8624#12564: signal process started
