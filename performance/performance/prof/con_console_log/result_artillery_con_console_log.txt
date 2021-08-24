@@ -1,0 +1,104 @@
+Log file: artillery_report_20210823_230487.json
+Phase 0 started - duration: 1s
+Report for the previous 10s @ 2021-08-24T02:04:21.910Z
+  Scenarios launched:  20
+  Scenarios completed: 0
+  Requests completed:  224
+  Concurrent users:    20
+  RPS sent: 25.34
+  Request latency:
+    min: 11.7
+    max: 1040.8
+    median: 363.1
+    p95: 464.8
+    p99: 871.1
+  Scenario duration:
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+  Codes:
+    200: 224
+Report for the previous 10s @ 2021-08-24T02:04:31.915Z
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  270
+  Concurrent users:    20
+  RPS sent: 25.53
+  Request latency:
+    min: 330.4
+    max: 841.4
+    median: 368.9
+    p95: 439.1
+    p99: 822.1
+  Scenario duration:
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+  Codes:
+    200: 270
+Report for the previous 10s @ 2021-08-24T02:04:41.922Z
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  284
+  Concurrent users:    20
+  RPS sent: 27.25
+  Request latency:
+    min: 331.7
+    max: 434.8
+    median: 360.3
+    p95: 408.4
+    p99: 428.1
+  Scenario duration:
+    min: NaN
+    max: NaN
+    median: NaN
+    p95: NaN
+    p99: NaN
+  Codes:
+    200: 284
+Report for the previous 10s @ 2021-08-24T02:04:49.905Z
+  Scenarios launched:  0
+  Scenarios completed: 20
+  Requests completed:  222
+  Concurrent users:    20
+  RPS sent: 25.36
+  Request latency:
+    min: 318.1
+    max: 471.6
+    median: 366.3
+    p95: 411.1
+    p99: 424.2
+  Scenario duration:
+    min: 36018.3
+    max: 36850.6
+    median: 36478.6
+    p95: 36754.5
+    p99: NaN
+  Codes:
+    200: 222
+all scenarios completed
+Complete report @ 2021-08-24T02:04:49.912Z
+  Scenarios launched:  20
+  Scenarios completed: 20
+  Requests completed:  1000
+  RPS sent: 26.72
+  Request latency:
+    min: 11.7
+    max: 1040.8
+    median: 364.9
+    p95: 422.4
+    p99: 777
+  Scenario duration:
+    min: 36018.3
+    max: 36850.6
+    median: 36478.6
+    p95: 36754.5
+    p99: NaN
+  Scenario counts:
+    0: 20 (100%)
+  Codes:
+    200: 1000

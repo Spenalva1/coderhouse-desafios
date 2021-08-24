@@ -1,0 +1,262 @@
+Statistical profiling result from con-console-log-v8.log, (4268 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   3213   75.3%          C:\Windows\SYSTEM32\ntdll.dll
+    978   22.9%          D:\Program Files\nodejs\node.exe
+      2    0.0%          C:\Windows\System32\KERNELBASE.dll
+      1    0.0%          C:\Windows\system32\mswsock.dll
+      1    0.0%          C:\Windows\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      7    0.2%    9.6%  LazyCompile: *parseChar D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:76:19
+      6    0.1%    8.2%  LazyCompile: *recurse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\babel-walk\lib\index.js:73:26
+      6    0.1%    8.2%  LazyCompile: *getTokenFromCode D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8886:19
+      5    0.1%    6.8%  LazyCompile: *walkAST D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-walk\index.js:4:17
+      4    0.1%    5.5%  LazyCompile: *parseMaybeUnary D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10864:18
+      3    0.1%    4.1%  LazyCompile: *nextToken D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8507:12
+      2    0.0%    2.7%  LazyCompile: *readString D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9346:13
+      2    0.0%    2.7%  LazyCompile: *processComment D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:453:17
+      2    0.0%    2.7%  LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      1    0.0%    1.4%  RegExp: ^when\b
+      1    0.0%    1.4%  RegExp: ^mixin +([-\w]+)(?: *\((.*)\))? *
+      1    0.0%    1.4%  RegExp: ^include\b
+      1    0.0%    1.4%  RegExp: ^block
+      1    0.0%    1.4%  LazyCompile: *walk.includeDependencies D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-filters\lib\handle-filters.js:14:13
+      1    0.0%    1.4%  LazyCompile: *tag D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-parser\index.js:1133:16
+      1    0.0%    1.4%  LazyCompile: *serializeInto D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\bson\lib\bson\parser\serializer.js:674:43
+      1    0.0%    1.4%  LazyCompile: *recurse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\babel-walk\lib\index.js:110:26
+      1    0.0%    1.4%  LazyCompile: *readWord1 D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9556:12
+      1    0.0%    1.4%  LazyCompile: *readToken_plus_min D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8798:21
+      1    0.0%    1.4%  LazyCompile: *readInt D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9135:10
+      1    0.0%    1.4%  LazyCompile: *readEscapedChar D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9454:18
+      1    0.0%    1.4%  LazyCompile: *pug_escape D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-runtime\index.js:200:20
+      1    0.0%    1.4%  LazyCompile: *pp$9.nextToken D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\acorn\dist\acorn.js:4391:28
+      1    0.0%    1.4%  LazyCompile: *parseStatementContent D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:12599:24
+      1    0.0%    1.4%  LazyCompile: *parseLiteralAtNode D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:11515:21
+      1    0.0%    1.4%  LazyCompile: *parseExpressionBase D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10648:22
+      1    0.0%    1.4%  LazyCompile: *parseExprAtom D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:11182:16
+      1    0.0%    1.4%  LazyCompile: *parse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:28:15
+      1    0.0%    1.4%  LazyCompile: *normalize path.js:265:12
+      1    0.0%    1.4%  LazyCompile: *nextTick internal/process/task_queues.js:101:18
+      1    0.0%    1.4%  LazyCompile: *match D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8437:8
+      1    0.0%    1.4%  LazyCompile: *interpolation D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:369:26
+      1    0.0%    1.4%  LazyCompile: *indent D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1487:19
+      1    0.0%    1.4%  LazyCompile: *getStringWidth internal/util/inspect.js:2030:43
+      1    0.0%    1.4%  LazyCompile: *expect D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-parser\index.js:136:19
+      1    0.0%    1.4%  LazyCompile: *checkReservedWord D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:12204:20
+      1    0.0%    1.4%  LazyCompile: *buffer D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-code-gen\index.js:203:19
+      1    0.0%    1.4%  LazyCompile: *block D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:763:18
+      1    0.0%    1.4%  LazyCompile: *allowInAnd D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:12382:13
+      1    0.0%    1.4%  LazyCompile: *advance D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1656:20
+      1    0.0%    1.4%  LazyCompile: *Writable.write internal/streams/writable.js:258:36
+      1    0.0%    1.4%  LazyCompile: *Identifier D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\with\lib\globals.js:137:15
+      1    0.0%    1.4%  LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     71    1.7%   97.3%  JavaScript
+      0    0.0%    0.0%  C++
+     15    0.4%   20.5%  GC
+   4195   98.3%          Shared libraries
+      2    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   3213   75.3%  C:\Windows\SYSTEM32\ntdll.dll
+     44    1.4%    D:\Program Files\nodejs\node.exe
+      2    4.5%      LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      2  100.0%        LazyCompile: *advance D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1656:20
+      2  100.0%          LazyCompile: *getTokens D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1704:22
+      2  100.0%            LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:10:13
+      1    2.3%      LazyCompile: ~realpathSync fs.js:1650:22
+      1  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      1    2.3%      LazyCompile: ~readNumber D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9229:13
+      1  100.0%        LazyCompile: *getTokenFromCode D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8886:19
+      1  100.0%          LazyCompile: *nextToken D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8507:12
+      1  100.0%            LazyCompile: *parseMaybeAssign D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10676:19
+      1    2.3%      LazyCompile: ~parseSubscripts D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10963:18
+      1  100.0%        LazyCompile: ~parseExprSubscripts D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10950:22
+      1  100.0%          LazyCompile: ~parseUpdate D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10926:14
+      1  100.0%            LazyCompile: ~parseMaybeUnary D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10864:18
+      1    2.3%      LazyCompile: ~parseMaybeUnary D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10864:18
+      1  100.0%        LazyCompile: ~parseExprOps D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10765:15
+      1  100.0%          LazyCompile: ~parseMaybeConditional D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10739:24
+      1  100.0%            LazyCompile: ~parseMaybeAssign D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:10676:19
+      1    2.3%      LazyCompile: ~multiplication32 D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\faker\vendor\mersenne.js:88:29
+      1  100.0%        LazyCompile: ~MersenneTwister19937.init_genrand D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\faker\vendor\mersenne.js:101:32
+      1  100.0%          LazyCompile: ~Mersenne D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\faker\lib\mersenne.js:3:18
+      1  100.0%            LazyCompile: ~Faker D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\faker\lib\index.js:24:16
+      1    2.3%      LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%        LazyCompile: ~connectionListener _http_server.js:412:28
+      1  100.0%          LazyCompile: ~emit events.js:264:44
+      1  100.0%            LazyCompile: ~onconnection net.js:1531:22
+      1    2.3%      LazyCompile: ~createHash crypto.js:114:20
+      1  100.0%        LazyCompile: ~passwordDigest D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\mongodb\lib\core\auth\scram.js:221:24
+      1  100.0%          LazyCompile: ~continueScramConversation D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\mongodb\lib\core\auth\scram.js:116:35
+      1  100.0%            LazyCompile: ~<anonymous> D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\mongodb\lib\core\auth\scram.js:106:50
+      1    2.3%      LazyCompile: *readString D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:9346:13
+      1  100.0%        LazyCompile: *getTokenFromCode D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8886:19
+      1  100.0%          LazyCompile: *nextToken D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8507:12
+      1  100.0%            LazyCompile: *next D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\@babel\parser\lib\index.js:8414:7
+      1    2.3%      LazyCompile: *eachOf D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1088:19
+      1  100.0%        LazyCompile: *advance D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1656:20
+      1  100.0%          LazyCompile: *getTokens D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1704:22
+      1  100.0%            LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:10:13
+      1    2.3%      D:\Program Files\nodejs\node.exe
+      1  100.0%        LazyCompile: *Parser D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\acorn\dist\acorn.js:470:31
+      1  100.0%          LazyCompile: *isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      1  100.0%            LazyCompile: *attributeValue D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1312:27
+
+    978   22.9%  D:\Program Files\nodejs\node.exe
+    643   65.7%    D:\Program Files\nodejs\node.exe
+    275   42.8%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+    177   64.4%        LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+    155   87.6%          LazyCompile: *Writable.write internal/streams/writable.js:258:36
+    154   99.4%            LazyCompile: ~value internal/console/constructor.js:258:20
+     22   12.4%          LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+     22  100.0%            LazyCompile: ~value internal/console/constructor.js:258:20
+     98   35.6%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+     98  100.0%          LazyCompile: ~Socket._writeGeneric net.js:759:42
+     98  100.0%            LazyCompile: ~Socket._write net.js:796:35
+     32    5.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:964:18
+     31   96.9%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+     31  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+     25   80.6%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      6   19.4%            LazyCompile: *Module._load internal/modules/cjs/loader.js:704:24
+      1    3.1%        LazyCompile: *Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:704:24
+     28    4.4%      LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:10:13
+     28  100.0%        LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:85:18
+     16   57.1%          LazyCompile: *compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+     16  100.0%            LazyCompile: ~exports.compile D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:264:27
+     12   42.9%          LazyCompile: ~loadString D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-load\index.js:49:34
+     12  100.0%            LazyCompile: ~compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+     26    4.0%      LazyCompile: *parseChar D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:76:19
+     13   50.0%        LazyCompile: *parseUntil D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:47:20
+      9   69.2%          LazyCompile: *attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      9  100.0%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      4   30.8%          LazyCompile: ~bracketExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:245:30
+      4  100.0%            LazyCompile: ~attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      8   30.8%        LazyCompile: *parse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:28:15
+      7   87.5%          LazyCompile: *attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      7  100.0%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      1   12.5%          LazyCompile: ~assertNestingCorrect D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:100:33
+      1  100.0%            LazyCompile: ~attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      2    7.7%        LazyCompile: ~parse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\character-parser\index.js:28:15
+      2  100.0%          LazyCompile: ~assertNestingCorrect D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:100:33
+      2  100.0%            LazyCompile: ~attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      2    7.7%        LazyCompile: *attributeValue D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1312:27
+      2  100.0%          LazyCompile: *attribute D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1216:22
+      2  100.0%            LazyCompile: ~attrs D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1440:18
+      1    3.8%        LazyCompile: *addText D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:499:20
+      1  100.0%          LazyCompile: ~text D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:647:17
+      1  100.0%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+     21    3.3%      D:\Program Files\nodejs\node.exe
+     13   61.9%        LazyCompile: *Parser D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\acorn\dist\acorn.js:470:31
+      6   46.2%          LazyCompile: *isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      4   66.7%            LazyCompile: *attributeValue D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1312:27
+      2   33.3%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      4   30.8%          LazyCompile: *isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\is-expression\index.js:14:22
+      4  100.0%            LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      3   23.1%          LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\is-expression\index.js:14:22
+      3  100.0%            LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      1    4.8%        LazyCompile: ~removeColors internal/util.js:47:22
+      1  100.0%          LazyCompile: ~isBelowBreakLength internal/util/inspect.js:1751:28
+      1  100.0%            LazyCompile: ~reduceToSingleString internal/util/inspect.js:1775:30
+      1    4.8%        LazyCompile: ~realpathSync fs.js:1650:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      1    4.8%        LazyCompile: ~collectionNamespace D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\connect-mongo\node_modules\mongodb\lib\core\wireprotocol\shared.js:98:29
+      1  100.0%          LazyCompile: ~writeCommand D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\connect-mongo\node_modules\mongodb\lib\core\wireprotocol\write_command.js:9:22
+      1  100.0%            LazyCompile: ~update D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\connect-mongo\node_modules\mongodb\lib\core\wireprotocol\index.js:8:26
+      1    4.8%        LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      1  100.0%          LazyCompile: ~ondata internal/streams/readable.js:717:18
+      1  100.0%            LazyCompile: *emit events.js:264:44
+      1    4.8%        LazyCompile: ~FastBuffer internal/buffer.js:951:1
+      1  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:149:28
+      1  100.0%            LazyCompile: ~createPool buffer.js:158:20
+      1    4.8%        LazyCompile: *reduceToSingleString internal/util/inspect.js:1775:30
+      1  100.0%          LazyCompile: *formatRaw internal/util/inspect.js:815:19
+      1  100.0%            LazyCompile: *formatValue internal/util/inspect.js:746:21
+      1    4.8%        LazyCompile: *buffer D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-code-gen\index.js:203:19
+      1  100.0%          LazyCompile: *visitTag D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-code-gen\index.js:613:21
+      1  100.0%            LazyCompile: *visitBlock D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-code-gen\index.js:420:23
+      1    4.8%        LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+     17    2.6%      LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+     16   94.1%        LazyCompile: *advance D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1656:20
+     14   87.5%          LazyCompile: *getTokens D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1704:22
+     14  100.0%            LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:10:13
+      2   12.5%          LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      2  100.0%            LazyCompile: ~getTokens D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1704:22
+      1    5.9%        LazyCompile: ~getTokens D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1704:22
+      1  100.0%          LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:10:13
+      1  100.0%            LazyCompile: ~lex D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:85:18
+     13    2.0%      LazyCompile: ~realpathSync fs.js:1650:22
+     11   84.6%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+     11  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+     11  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      2   15.4%        LazyCompile: *Module._findPath internal/modules/cjs/loader.js:444:28
+      2  100.0%          LazyCompile: *Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      2  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:704:24
+     12    1.9%      LazyCompile: ~load D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-load\index.js:9:14
+      8   66.7%        LazyCompile: ~loadString D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-load\index.js:49:34
+      8  100.0%          LazyCompile: ~compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+      8  100.0%            LazyCompile: ~exports.compile D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:264:27
+      4   33.3%        LazyCompile: *compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+      4  100.0%          LazyCompile: ~exports.compile D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:264:27
+      4  100.0%            LazyCompile: ~handleTemplateCache D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:236:29
+     10    1.6%      LazyCompile: ~cpus os.js:101:14
+     10  100.0%        LazyCompile: ~<anonymous> D:\Users\penal\Desktop\coderhouse-desafios\performance\routes\process.js:9:28
+      6   60.0%          LazyCompile: *handle D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\router\layer.js:86:49
+      6  100.0%            LazyCompile: ~next D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\router\route.js:114:16
+      4   40.0%          LazyCompile: ~handle D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\router\layer.js:86:49
+      4  100.0%            LazyCompile: ~next D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\router\route.js:114:16
+      9    1.4%      LazyCompile: ~statSync fs.js:1081:18
+      9  100.0%        LazyCompile: ~tryStat D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\view.js:174:17
+      9  100.0%          LazyCompile: ~resolve D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\view.js:146:42
+      9  100.0%            LazyCompile: ~lookup D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\express\lib\view.js:104:40
+      9    1.4%      LazyCompile: ~parse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-parser\index.js:10:15
+      9  100.0%        LazyCompile: ~parse D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:110:20
+      7   77.8%          LazyCompile: ~loadString D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-load\index.js:49:34
+      7  100.0%            LazyCompile: ~compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+      2   22.2%          LazyCompile: *compileBody D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:77:21
+      2  100.0%            LazyCompile: ~exports.compile D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:264:27
+      9    1.4%      LazyCompile: ~openSync fs.js:467:18
+      9  100.0%        LazyCompile: ~readFileSync fs.js:374:22
+      5   55.6%          LazyCompile: ~handleTemplateCache D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:236:29
+      5  100.0%            LazyCompile: ~exports.renderFile D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug\lib\index.js:436:30
+      4   44.4%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      4  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      8    1.2%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      8  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+      8  100.0%          LazyCompile: ~Socket._writev net.js:791:36
+      8  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+      7    1.1%      LazyCompile: *Parser D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\acorn\dist\acorn.js:470:31
+      4   57.1%        LazyCompile: *isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      4  100.0%          LazyCompile: *attributeValue D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1312:27
+      4  100.0%            LazyCompile: *attribute D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1216:22
+      2   28.6%        LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\is-expression\index.js:14:22
+      2  100.0%          LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      1   50.0%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+      1   50.0%            LazyCompile: *attributeValue D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1312:27
+      1   14.3%        LazyCompile: *isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\is-expression\index.js:14:22
+      1  100.0%          LazyCompile: ~isExpression D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:75:25
+      1  100.0%            LazyCompile: *callLexerFunction D:\Users\penal\Desktop\coderhouse-desafios\performance\node_modules\pug-lexer\index.js:1635:30
+
