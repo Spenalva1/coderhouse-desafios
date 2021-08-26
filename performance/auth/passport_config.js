@@ -6,7 +6,7 @@ passport.use(new FacebookStrategy(
   {
     clientID: process.argv[3] || process.env.FACEBOOK_APP_ID,
     clientSecret: process.argv[4] || process.env.FACEBOOK_APP_KEY,
-    callbackURL: `http://localhost:${process.argv[2] || process.env.PORT || 8080}/auth/facebook/callback`,
+    callbackURL: process.env.FACEBOOK_CALLBACK_URL,
     profileFields: ['id', 'displayName', 'photos', 'emails'],
   },
   function(accessToken, refreshToken, profile, done) {
