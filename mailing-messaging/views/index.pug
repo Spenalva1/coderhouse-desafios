@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+  link(rel='stylesheet' href='style.css')
+  script(src='https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js')
+  script(src='/socket.io/socket.io.js')
+  script(src='https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js')
+  script(type='module' src='./index.js' defer='')
+  title Guardar producto
+.container-fluid
+  block(class="logged-alert d-flex justify-content-between align-items-center alert alert-primary fw-bold mt-4" role="alert")
+    block()
+      h2(class="fw-bold logged-message") Bienvenido #{name}
+      h3(class="logged-message") #{email}
+    block()
+      img(src=photo , alt=name)
+    a(href="/logout" class="btn btn-warning") Desloguear
+
+
+  h2.mb-4.mt-4 Guardar producto
+  form.product-form(action='/api/productos/guardar' method='POST')
+    .mb-3
+      label.form-label(for='title') Nombre
+      input#title.form-control(type='text' name='title')
+    .mb-3
+      label.form-label(for='price') Precio
+      input#price.form-control(type='number' name='price')
+    .mb-3
+      label.form-label(for='thumbnail') Foto URL
+      input#thumbnail.form-control(type='text' name='thumbnail')
+    button.btn.btn-success(type='submit') Guardar Producto
+  .productsCtn.text-light.mt-4
+  .chat.pt-4.mb-2
+    h2.mb-4.mt-4 Centro de mensajes
+    h2.mb-4.mt-4.compression
+    form.chat-form
+      .mb-3
+        label(for='email') Email:
+        input.form-control(type='email' name='email' required='' placeholder='Ingrese su email...')
+      .row.mb-3
+        .col
+          label(for='name') Nombre:
+          input.form-control(type='text' name='name' required='' placeholder='Ingrese su nombre...')
+        .col
+          label(for='') Apellido:
+          input.form-control(type='text' name='surname' required='' placeholder='Ingrese su apellido...')
+      .row.mb-3
+        .col
+          label(for='') Edad:
+          input.form-control(type='number' name='age' required='')
+        .col
+          label(for='') Alias:
+          input.form-control(type='text' name='alias' required='' placeholder='Ingrese su alias...')
+      .mb-3
+        label(for='email') Avatar:
+        input.form-control(type='text' name='avatar' required='' placeholder='Ingrese su avatar...')
+      hr
+      .chat-messages.mb-3
+      .row
+        .mb-3.col-auto
+          input.form-control(type='text' name='message' required='' placeholder='Ingrese un mensaje...')
+        .col-auto
+          button.btn.btn-primary(type='submit') Enviar!
