@@ -1,0 +1,55 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start0x": "0x server.js",
+    "dev": "nodemon server.js",
+    "test-mocha": "mocha ./test/mocha.test.js",
+    "test-axios": "node ./test/axios.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autocannon": "^7.4.0",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "express-session": "^1.17.2",
+    "faker": "^5.5.3",
+    "graphql": "^15.5.3",
+    "handlebars": "^4.7.7",
+    "knex": "^0.95.11",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.2",
+    "mongoose-findorcreate": "^3.0.0",
+    "mysql": "^2.18.1",
+    "nodemailer": "^4.7.0",
+    "normalizr": "^3.6.1",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2",
+    "socket.io": "^4.1.2",
+    "twilio": "^3.67.1",
+    "winston": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  }
+}
