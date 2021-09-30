@@ -1,0 +1,20 @@
+
+> mongoose@1.0.0 test-mocha
+> mocha ./test/mocha.test.js
+
+
+
+  test api rest
+    listar
+      ✔ Debería retornar un status 200 (379ms)
+      ✔ Debería retornar un array como data (360ms)
+    guardar
+      ✔ Debería retornar un status 201 y crear un producto (358ms)
+    actualizar
+      ✔ Debería retornar un status 201 y modificar un producto (725ms)
+    borrar
+      ✔ Debería retornar un status 200 y borrar un producto (1092ms)
+
+
+  5 passing (3s)
+
