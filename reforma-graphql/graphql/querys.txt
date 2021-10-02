@@ -1,0 +1,42 @@
+query getProducts {
+  Products {
+    title
+    thumbnail
+    price
+    _id
+  }
+}
+
+query getProduct {
+  Product(id: "6158c5f6dc388642948cd456") {
+    title
+    price
+    thumbnail
+  }
+}
+
+mutation CreateProduct {
+  CreateProduct(title: "probando graphql", thumbnail: "asdf.com", price: 22222.25) {
+    title,
+    thumbnail,
+    price,
+    _id
+  }
+}
+
+mutation UpdateProduct {
+  UpdateProduct(id: "6158c5f6dc388642948cd456", title: "editando graphql", thumbnail: "asdf.com", price: 333) {
+    title,
+    thumbnail,
+    price,
+    _id
+  }
+}
+  
+mutation DeleteProduct {
+  DeleteProduct(id: "6158c5f6dc388642948cd456") {
+    title
+    price
+    thumbnail
+  }
+}
